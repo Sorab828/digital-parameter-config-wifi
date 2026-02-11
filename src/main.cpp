@@ -1,19 +1,28 @@
 #include <Arduino.h>
 #include <Wire.h>
 #include <Adafruit_GFX.h>
-#include <Adafruit_SSD1306.h>>
+#include <Adafruit_SSD1306.h>
 
 #define SCREEN_WIDTH 128
 #define SCREEN_HEIGHT 64
-// oled 12c address
+
 #define OLED_ADDRESS 0x3C
 
-Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, rst_pin:-1);
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, rstpin: -1);
 
 void setup() {
-// write your initialization code here
+    // write your initialization code here
+    Serial.begin(9600);
+    if (!display.begin(switchvcc: SSD1306_SWITCHCAPVCC, OLED_ADDRESS)) {
+        Serial.println(F("SSD1306 allocation failed"));
+        while(true);
+    }
+    display.clearDisplay();
+
+
+
 }
 
 void loop() {
-// write your code here
+    // write your code here
 }
