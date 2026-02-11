@@ -18,6 +18,7 @@ void setup() {
         while(true);
     }
     display.clearDisplay();
+    display.setTextSize(1);
 
 
 }
