@@ -21,7 +21,11 @@ void setup() {
     display.setTextSize(1);
     display.setTextColor(SSD1306_WHITE);
     display.setCursor(0, 0);
-    display.println("Hello, World!");
+
+    display.println("Arduino");
+    display.println("oled");
+    display.println("Hello");
+
     display.display();
 
 
@@ -29,4 +33,5 @@ void setup() {
 
 void loop() {
     // write your code here
+
 }
